@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "487685189725",
+    "firebase_url": "https://todotrack-87c4a.firebaseio.com",
+    "project_id": "todotrack-87c4a",
+    "storage_bucket": "todotrack-87c4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487685189725:android:af7d5854e38e1361",
+        "android_client_info": {
+          "package_name": "com.example.mypackage.todotrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487685189725-5p8prgo8u7fabff28td12p6sc2nl177q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3GqkBY6V-vf5IOYRMD2LlB-Wu6iKRG8Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
