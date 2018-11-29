@@ -41,10 +41,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
 
-        buttonSignIn = (Button) findViewById(R.id.buttonSignin);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textViewSignUp = (TextView) findViewById(R.id.textViewSignUp);
+        buttonSignIn = findViewById(R.id.buttonSignin);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        textViewSignUp = findViewById(R.id.textViewSignUp);
         progressDialog = new ProgressDialog(this);
 
         buttonSignIn.setOnClickListener(this);
@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task){
-
+                        progressDialog.dismiss();
                         if(task.isSuccessful()){
                             finish();
                             startActivity(new Intent(getApplicationContext(),ProfileActivity.class));

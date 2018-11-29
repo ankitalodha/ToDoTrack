@@ -4,23 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e5f5ff"
     tools:context=".LoginActivity">
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="345dp"
+        android:layout_height="469dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="#e5f5ff"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Lets go."
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textColorHighlight="@android:color/background_dark"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -38,12 +53,15 @@
             android:hint="Enter your password"
             android:inputType="textPassword" />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/buttonSignin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_margin="15dp"
-            android:text="SIGN IN" />
+            android:text="SIGN IN"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:backgroundTint="@android:color/holo_blue_dark" />
 
         <TextView
             android:id="@+id/textViewSignUp"
