@@ -19,6 +19,12 @@ public class UserInformation {
         this.lng = lng;
     }
 
+    public UserInformation(String taskName, String taskDesc, String taskLocation) {
+        this.taskName = taskName;
+        this.taskDesc = taskDesc;
+        this.taskLocation = taskLocation;
+    }
+
     public String getTaskName() {
         return taskName;
     }

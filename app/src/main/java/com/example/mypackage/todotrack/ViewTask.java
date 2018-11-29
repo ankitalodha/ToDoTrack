@@ -89,18 +89,24 @@ public class ViewTask extends AppCompatActivity {
     private void showData(DataSnapshot dataSnapshot) {
         for(DataSnapshot ds : dataSnapshot.getChildren()){
             UserInformation uInfo = dataSnapshot.getValue(UserInformation.class);
-            Log.d(TAG, "lets see" + uInfo.toString());
+           // Log.d(TAG, "lets see" + uInfo.toString());
              // uInfo.getTaskName(ds.child(userID).getValue(UserInformation.class).getTaskName()); //set the name
              // uInfo.getTaskDesc(ds.child(userID).getValue(UserInformation.class).setTaskDesc()); //set the email
              // uInfo.getTaskLocation(ds.child(userID).getValue(UserInformation.class).getTaskLocation()); //set the phone_num
 
+            String taskName = ds.child("taskName").getValue(String.class);
+            String taskDesc = ds.child("taskDesc").getValue(String.class);
+            String taskLoc = ds.child("taskLocation").getValue(String.class);
+
+            UserInformation userInformation  = new UserInformation(taskName, taskDesc , taskLoc);
+
             //display all the information
-            Log.d(TAG, "showData: name: " + uInfo.getTaskName());
-            Log.d(TAG, "showData: email: " + uInfo.getTaskDesc());
-            Log.d(TAG, "showData: phone_num: " + uInfo.getTaskLocation());
+            Log.d(TAG, "showData: name: " + taskName);
+            Log.d(TAG, "showData: email: " + taskDesc);
+            Log.d(TAG, "showData: phone_num: " + taskLoc);
 
             ArrayList<UserInformation> array  = new ArrayList<>();
-            array.add(uInfo);
+            array.add(userInformation);
 
             ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,array);
             mListView.setAdapter(adapter);
